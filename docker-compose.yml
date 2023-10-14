@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    ports:
+      - "1777:1777"
+    environment:
+      - PW=vtuberstar
+      - SAFE_DIR=/safe # / is required
+  web:
+    build: ./web
+    ports:
+      - "1778:1778"
